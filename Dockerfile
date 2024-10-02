@@ -45,7 +45,6 @@ COPY entrypoint.sh .
 
 # Make the entrypoint script executable
 RUN chmod +x entrypoint.sh
-RUN chmod +x wait-for-it.sh 
 
 # Switch to non-root user
 USER appuser
