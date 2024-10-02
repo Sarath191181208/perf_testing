@@ -1,6 +1,7 @@
 package api
 
 import (
+	"net/http"
 	healthcheck "sarath/perf_testing/cmd/api/services"
 	"sarath/perf_testing/cmd/api/services/users"
 
@@ -14,7 +15,8 @@ func (app *Application) Routes() *mux.Router{
   users_handler := users.New(app.Logger, app.Db)
 
   mux.HandleFunc("/health", health_check_handler.HandleHealthCheck)
-  mux.HandleFunc("/register", users_handler.RegisterUser)
+  mux.HandleFunc("/register", users_handler.RegisterUsers).Methods(http.MethodPost)
+  mux.HandleFunc("/get/{id}", users_handler.FindUser)
 
   return mux
 }

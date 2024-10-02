@@ -41,7 +41,6 @@ WORKDIR /app
 
 # Copy the binary and entrypoint script from the builder stage
 COPY --from=builder /app/myapp .
-COPY wait-for-it.sh .
 COPY entrypoint.sh .
 
 # Make the entrypoint script executable

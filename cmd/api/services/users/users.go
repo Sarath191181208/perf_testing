@@ -72,7 +72,7 @@ func (handler *Handler) RegisterUsers(w http.ResponseWriter, r *http.Request) {
 	}, w)
 }
 
-func (app *Handler) FindURL(w http.ResponseWriter, r *http.Request) {
+func (app *Handler) FindUser(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
 
