@@ -5,6 +5,7 @@
 
 ## Demo 
 
+![Architecture](./assets/screenshots/architecture.png)
 ![Dashboard image](./assets/screenshots/dashboard.png)
 ![Load Testing stats image](./assets/screenshots/loadtest.png)
 
